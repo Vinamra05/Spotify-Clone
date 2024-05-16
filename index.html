@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'Spotify - Web Player: Music for everyone'</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="close">
+                <img class="invert bandkaro"   width="40px" src="assets/close.svg" alt="">
+            </div>
+            <nav>
+                <div  class="logo"><img src="assets/logo.svg" alt=""></div>
+                <div ><span style="font-size: 2rem;" class="material-symbols-outlined">home</span><span>Home</span></div>
+                <div ><span  style="font-size: 2rem;"class="material-symbols-outlined">
+                        search
+                    </span><span>Search</span></div>
+            </nav>
+            <div  class="library">
+                <header>
+                    <span style="display: flex; align-items: center ; gap: 6px;">
+                        <img style="filter: invert(1);" src="assets/lib.svg" alt=""> <span>Your library</span>
+                    </span>
+                    <span style="font-size: 1.6rem;" class="material-symbols-outlined">
+                        add
+                    </span>
+                </header>
+                <main>
+                    <div class="songlist">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+
+                </main>
+                <footer>
+                    <div class="footer">
+                        <div><a target="_blank" href="https://www.spotify.com/legal/cookies-policy/">Cookies</a></div>
+                        <div class="engBtn">
+                            <button><span><img class="invert" src="https://riturajsingh.freewebhostmost.com/svgs/globe.svg" alt=""></span><span>English</span></button>
+                        </div>
+                    </div>
+                   
+                </footer>
+            </div>
+
+        </div>
+        <div class="right">
+            <!-- <div class="hamburger">
+                
+            </div> -->
+            <header>
+                <nav>
+                    <div>
+
+                        <img width="35"    class="invert hamburger"  src="assets/hamburger.svg" alt="">
+                        <div class="arrow">
+                            <span class="material-symbols-outlined">
+                                chevron_left
+                                </span>
+                                <span class="material-symbols-outlined">
+                                    chevron_right
+                                    </span>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <div class="signupbtn">Sign up</div>
+                        <div class="loginbtn">Login</div>
+                    </div>
+                </nav>
+            </header>
+            <main>
+                <div><h2>Spotify Playlists</h2></div>
+                <div class="cardcontainer">
+                    
+                </div>
+            </main>
+        </div>
+        <div class="player">
+            <span class="songname"></span>
+            <span class="controller">
+                <div class="buttons">
+                    <span style="font-size: 2rem;"   id="backward" class="material-symbols-outlined">
+                        skip_previous
+                        </span>
+                     <span class="play">
+                        <span  class="material-symbols-outlined">
+                            play_circle
+                            </span>
+                     </span>
+                     <span style=" font-size: 2rem;"  id="forward"  class="material-symbols-outlined">
+                        skip_next
+                        </span>
+                </div>
+                <div class="seek">
+                    <span class="current">- -/- -</span>
+                    <div class="seekbar">
+                        <div class="ball"></div>
+                    </div>
+                    <span class="totalduration">- -/- -</span>
+
+                </div>
+            </span>
+            <span class="volume">
+                <div id="bhopu" style="cursor: pointer;" ><span class="material-symbols-outlined">
+                    volume_up
+                    </span></div>
+                <input style="cursor: pointer; background-color: #121212;" type="range" name="volControl" class="slider" id="myRange">
+            </span>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

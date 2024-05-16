@@ -1,0 +1,488 @@
+body{
+    background-color: black;
+    font-family: "Roboto", sans-serif;
+}
+
+.logo{
+    filter: invert(1);
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    
+}
+.left nav{
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+    max-height: 30vh;
+}
+.left nav div{
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+.left nav div span{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.library{
+    background-color: #121212;
+    border-radius: 8px;
+    padding: 16px;
+   
+}
+.library header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.library header span{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.songlist{
+    max-height: 50vh;
+    overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+  }
+
+
+*{
+    color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.container{
+    position: relative;
+    display: flex;
+    margin: 8px;
+    gap: 8px;
+}
+.left{
+    width: 25%;
+}
+.right{
+    width: 75%;
+    border-radius: 8px;
+}
+.right header nav div{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+.right header nav{
+    border-radius: 8px 8px 0px 0px;
+    background-color: #121212;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.right main{
+    background-color: #1d1d1d;
+    border-radius:  0px 0px 8px 8px;
+
+}
+
+.arrow span{
+    background-color: black;
+    padding: 3px;
+    border-radius: 23px;
+}
+.button{
+    display: flex;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.loginbtn{
+    background-color: white;
+    color: black;
+    padding: 8px 20px;
+    display: grid;
+    align-content: center;
+    border-radius: 16px;
+    cursor: pointer;
+}
+.signupbtn{
+    padding: 8px 20px;
+    display: grid;
+    align-content: center;
+    cursor: pointer;
+
+}
+.loginbtn:hover{
+   transform: scale(1.05);
+   
+}
+.signupbtn:hover{
+   transform: scale(1.05);
+   color: gray;
+}
+.right{
+    max-height: 80vh;
+}
+
+.right main{
+    overflow: auto;
+    height: 90%;
+    padding: 16px;
+    display: grid;
+    gap: 8px;
+}
+.cardcontainer{
+    display: flex;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+}
+ .card{
+    background-color: #181818; 
+    border-radius: 8px;
+    width: 205px;
+    padding: 16px;
+    display: grid;
+    gap: 6px;
+    cursor: pointer;
+ }
+ .card:hover{
+    background-color:#282727dd ;
+ }
+ .card div{
+    position: relative;
+ }
+ .card img{
+    width: 100%;
+    border-radius: 8px;
+ }
+ .card p{
+    color: gray;
+ }
+
+ .card div::after{
+    content: url(/assets/play.svg);
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    bottom: 0%;
+    visibility: hidden;
+    right: 4%;
+    top:65%
+ }
+ .card:hover div::after{
+    visibility: visible;
+    /* bottom: 4%; */
+    top:62%
+ }
+ .player{
+    width: 100%;
+    position: fixed;
+    bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 8%;
+ }
+ .controller{
+    width: 55%;
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    align-items: center;
+ }
+ .buttons{
+    display: flex ;
+    align-items: center;
+    gap: 8px;
+    
+ }
+ .buttons span{
+    cursor: pointer;
+ }
+ .play span{
+    font-size: 2.4rem;
+    color: white;
+ }
+.seek{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+ .seekbar{
+    width: 85%;
+    cursor:move;
+    height: 6px;
+    border-radius: 23px;
+    background-color: grey;
+    position: relative;
+ }
+.ball{
+    height: 12px;
+    width: 12px;
+    border-radius: 23px;
+    background-color: blue;
+    position: absolute;
+    left: 0%;
+    transform: translate(-50%,50%);
+    bottom: 50%;
+    transition: left 0.4s ease;
+}
+.songlist ul li{
+    margin-top: 15px;
+    margin-left: 20px;
+    list-style: none;
+    /* list-style-type: decimal; */
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    padding: 12px 0;
+    border: 1px solid rgba(146, 143, 143, 0.491);
+    margin: 12px 0; 
+    padding: 13px;
+    border-radius: 5px;
+    overflow-x: hidden;
+    background-color: #1d1d1d;
+    transition: all 0.1s ease-out;
+}
+.songlist ul li:hover {
+    background-color:#353434ec ;
+}
+.invert{
+    filter: invert(1);
+}
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.playnow span{
+    font-size: 13px;
+    width: 65px;
+    
+}
+.volume{
+    display: flex ;
+    align-items: center;
+    gap: 8px;
+}
+.engBtn button {
+    border-radius: 23px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    padding: 3px 10px;
+    gap: 5px;
+    cursor: pointer;
+}
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 15px;
+}
+.footer div a{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+
+}
+.songname{
+    margin-top: 2%;
+    padding-right: 10px;
+}
+.hamburger{
+    display: none;
+}
+.close{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+input[type=range] {
+    height: 25px;
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #2497E3;
+    border-radius: 1px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #A1D0FF;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    /* left:0% */
+    background: #2497E3;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background: #2497E3;
+    border-radius: 1px;
+    border: 0px solid #000000;
+  }
+  input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #A1D0FF;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #2497E3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #2497E3;
+    border: 0px solid #000000;
+    border-radius: 2px;
+    box-shadow: 0px 0px 0px #000000;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 1px solid #2497E3;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #A1D0FF;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #2497E3;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #2497E3;
+  }
+  
+
+
+
+
+  @media (max-width: 1380px) {
+    .left {
+        position: absolute;
+        left: -140%;
+        transition: all 0.7s ease-in-out;
+        z-index: 1;
+        min-width: 325px;
+        background-color: black;
+    }
+    .cardcontainer{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .close{
+        position: absolute;
+        right: 25px;
+        top: 16px;
+        width: 40px;
+        z-index: 1;
+        display: block;
+        cursor: pointer;
+    }
+    .library {
+        min-width: 340px;
+        min-height: 67vh;
+    }
+
+    .right {
+        width: 100%;
+        margin: 8px 8px;
+    }
+    .hamburger{
+        display: block;
+    }
+    .loginbtn:hover{
+        transform: scale(1.05);
+        
+     }
+     .signupbtn:hover{
+        transform: scale(1.05);
+        color: gray;
+     }
+   
+}
+@media (max-width:700px)
+{
+    .player{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        
+    }
+    .controller{
+        width:100% ;
+    }
+    .signupbtn,.loginbtn{
+        padding: 5px;
+    }
+    .loginbtn:hover{
+        transform: scale(1.05);
+        
+     }
+     .signupbtn:hover{
+        transform: scale(1.05);
+        color: gray;
+     }
+   
+}
